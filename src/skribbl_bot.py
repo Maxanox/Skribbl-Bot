@@ -16,6 +16,7 @@ class SkribblBot:
         room_code = input("Room code: ")
         self.__room = SkribblRoom(room_code)
         self.__room.choose_name(self.__name)
+        self.__room.ready()
 
     def __create_room(self) -> None:
         self.__room = SkribblRoom()

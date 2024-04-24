@@ -67,6 +67,14 @@ class SkribblRoom:
             raise Exception(f"Start random game button not found:\n{e.msg}")
         else:
             button_e.click()
+    
+    def ready(self):
+        try:
+            button_e = self.__driver.find_element(By.CLASS_NAME, self.BUTTON_START_RANDOM_CLASS)
+        except NoSuchElementException as e:
+            raise Exception(f"Ready button not found:\n{e.msg}")
+        else:
+            button_e.click()
 
     def choose_name(self, name: str) -> None:
         try:
