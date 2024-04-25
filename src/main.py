@@ -11,6 +11,7 @@ def main():
     gis = GoogleImagesSearch(KEY, CX)
 
     name = input("Your bot name: ")
+    print()  # adds a newline
 
     skribbl_bot = SkribblBot(name, gis)
     skribbl_bot.run()
